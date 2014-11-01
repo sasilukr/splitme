@@ -2,12 +2,14 @@
 <html>
 <head>
     <title>Split Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
-
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 
     <style>
         body { font-family: Helvetica, Arial, sans-serif; }
@@ -19,17 +21,28 @@
     </style>
 </head>
 <body>
-<div>
-    <h1>Congratulations! You're already hosting with Parse.</h1>
-    <p>To get started, edit this file at <em>public/index.html</em> and start adding static content.</p>
-    <p>If you want something a bit more dynamic, delete this file and check out <a href="https://parse.com/docs/hosting_guide#webapp">our hosting docs</a>.</p>
+<div data-role="page">
+    <div data-role="content">
+        <h1>Congratulations! You're already hosting with Parse.</h1>
+        <p>To get started, edit this file at <em>public/index.html</em> and start adding static content.</p>
+        <p>If you want something a bit more dynamic, delete this file and check out <a href="https://parse.com/docs/hosting_guide#webapp">our hosting docs</a>.</p>
+        <label for="flip-1">Flip switch:</label>
+        <select name="flip-1" id="flip-1" data-role="slider">
+            <option value="off">Off</option>
+            <option value="on">On</option>
+        </select>
+    </div>
 </div>
 
 
 
 
 <!-- Latest compiled and minified JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 
 </body>
 </html>

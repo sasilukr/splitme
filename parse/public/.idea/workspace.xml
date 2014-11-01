@@ -23,30 +23,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="bill.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="bill.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bill.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.836129" vertical-offset="0" max-vertical-offset="775">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+            <state vertical-scroll-proportion="-19.37037" vertical-offset="197" max-vertical-offset="990">
+              <caret line="40" column="89" selection-start-line="40" selection-start-column="89" selection-end-line="40" selection-end-column="89" />
               <folding>
-                <element signature="tag#html#0" expanded="true" />
                 <element signature="tag#head#0;tag#html#0" expanded="true" />
                 <element signature="tag#style#0;tag#head#0;tag#html#0" expanded="true" />
-                <element signature="tag#body#0;tag#html#0" expanded="true" />
                 <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#select#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="756">
-              <caret line="9" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.72" vertical-offset="0" max-vertical-offset="775">
+              <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
               <folding>
+                <element signature="tag#head#0;tag#html#0" expanded="true" />
                 <element signature="tag#style#0;tag#head#0;tag#html#0" expanded="true" />
-                <element signature="tag#body#0;tag#html#0" expanded="true" />
                 <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="true" />
               </folding>
             </state>
@@ -84,8 +84,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/bill.html" />
         <option value="$PROJECT_DIR$/css/splitme.css" />
+        <option value="$PROJECT_DIR$/bill.html" />
       </list>
     </option>
   </component>
@@ -270,14 +270,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/bill.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="802">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/splitme.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
@@ -286,27 +278,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/bill.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="756">
-          <caret line="9" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding>
-            <element signature="tag#style#0;tag#head#0;tag#html#0" expanded="true" />
-            <element signature="tag#body#0;tag#html#0" expanded="true" />
-            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="802">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bill.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.836129" vertical-offset="0" max-vertical-offset="775">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state vertical-scroll-proportion="-19.37037" vertical-offset="197" max-vertical-offset="990">
+          <caret line="40" column="89" selection-start-line="40" selection-start-column="89" selection-end-line="40" selection-end-column="89" />
           <folding>
-            <element signature="tag#html#0" expanded="true" />
             <element signature="tag#head#0;tag#html#0" expanded="true" />
             <element signature="tag#style#0;tag#head#0;tag#html#0" expanded="true" />
-            <element signature="tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#select#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.72" vertical-offset="0" max-vertical-offset="775">
+          <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+          <folding>
+            <element signature="tag#head#0;tag#html#0" expanded="true" />
+            <element signature="tag#style#0;tag#head#0;tag#html#0" expanded="true" />
             <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="true" />
           </folding>
         </state>
