@@ -8,12 +8,17 @@ h1 {
 
 h2 {
     color: white;
-    font-size: 24px;
+    font-size: 60px;
 }
 
 body {
     margin-bottom: 120px;
-    font-size: 24px;
+    font-size: 48px;
+    font-family: 'Contrail One', cursive;
+}
+
+td {
+    font-size: 48px;
 
 }
 
@@ -46,15 +51,19 @@ body {
 }
 
 .card {
-    border-radius: 6px;
+    border-radius: 15px;
     background-color: white;
     color: #701314;
-    padding: 10px;
+    padding: 30px;
     display: inline-block;
-    width: 90%;
+    width: 100%;
+    margin: 10px 0px;
 }
 .container {
     text-align: center;
+    /*width: 100%;*/
+    width: 98%;
+    margin: auto;
 }
 
 .dish-name {
@@ -63,12 +72,12 @@ body {
 
 .footer {
     position: absolute;
-    height: 120px;
+    /*height: 120px;*/
     background-color: white;
     color: black;
     bottom: 0;
     width: 100%;
-    padding: 10px;
+    padding: 10px 30px;
 }
 
 .footer-subtotal {
@@ -97,20 +106,27 @@ body {
     clear: both;
 }
 
+.menu-toggle {
+    float: right;
+}
+
+
+
 .menu-people {
     float: right;
     width: 65%;
     margin: 10px 0px;
 }
 
+.menu-people>table {
+    width: 100%;
+}
 
 .menu-people-name {
     float: left;
 }
 .price {
     float: right;
-    font-size: 24px;
-
 }
 
 .total {
@@ -133,9 +149,8 @@ body {
 
 
 /****** TOGGLE SWTICH *****/
-
 .onoffswitch {
-    position: relative; width: 90px;
+    position: relative; width: 200px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
 }
 .onoffswitch-checkbox {
@@ -143,7 +158,7 @@ body {
 }
 .onoffswitch-label {
     display: block; overflow: hidden; cursor: pointer;
-    border: 2px solid #FFFFFF; border-radius: 20px;
+    border: 2px solid #FFFFFF; border-radius: 35px;
 }
 .onoffswitch-inner {
     display: block; width: 200%; margin-left: -100%;
@@ -151,26 +166,26 @@ body {
     -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
 }
 .onoffswitch-inner:before, .onoffswitch-inner:after {
-    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
-    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    display: block; float: left; width: 50%; height: 53px; padding: 0; line-height: 53px;
+    font-size: 40px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
     -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 .onoffswitch-inner:before {
     content: "Yum!";
-    padding-left: 10px;
-    background-color: #560F10; color: #FFFFFF;
+    padding-left: 16px;
+    background-color: #701314; color: #FFFFFF;
 }
 .onoffswitch-inner:after {
     content: "Nope";
-    padding-right: 10px;
+    padding-right: 16px;
     background-color: #EEEEEE; color: #999999;
     text-align: right;
 }
 .onoffswitch-switch {
-    display: block; width: 18px; margin: 6px;
+    display: block; width: 35px; margin: 9px;
     background: #FFFFFF;
-    border: 2px solid #FFFFFF; border-radius: 20px;
-    position: absolute; top: 0; bottom: 0; right: 56px;
+    border: 2px solid #FFFFFF; border-radius: 35px;
+    position: absolute; top: 0; bottom: 0; right: 143px;
     -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
     -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s;
 }
@@ -180,5 +195,4 @@ body {
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
     right: 0px;
 }
-
 /****** END TOGGLE SWTICH *****/

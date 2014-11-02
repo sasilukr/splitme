@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
 
     <link href='http://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Contrail+One' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/splitme.css" />
 </head>
 <body class="gradient">
@@ -19,22 +20,79 @@
                 <h2>Heart Attack Grill</h2>
             </div>
             <div class="card">
+                <div class="dish-name">Double Bypass Burger</div>
+                <div class="price">
+                    12.03
+                </div>
+
+                <img class="menu-img" src="img/menu-img1.png"/>
+                <div class="menu-people">
+                    <table class="">
+                        <tr>
+                            <td>
+                                Ray
+                            </td>
+                            <td class="menu-toggle">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch1-1">
+                                    <label class="onoffswitch-label" for="myonoffswitch1-1">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Sasi
+                            </td>
+                            <td class="menu-toggle">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch1-2">
+                                    <label class="onoffswitch-label" for="myonoffswitch1-2">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Harvey
+                            </td>
+                            <td class="menu-toggle">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch1-3">
+                                    <label class="onoffswitch-label" for="myonoffswitch1-3">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+
+            </div>
+
+            <div class="card">
                 <div class="dish-name">Single Bypass Burger</div>
                 <div class="price">
                     9.25
                 </div>
 
-                <img class="menu-img" src="img/menu-1.png"/>
+                <img class="menu-img" src="img/menu-img2.png"/>
                 <div class="menu-people">
-                    <table>
+                    <table class="">
                         <tr>
                             <td>
                                 Ray
                             </td>
-                            <td>
+                            <td class="menu-toggle">
                                 <div class="onoffswitch">
-                                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch1">
-                                    <label class="onoffswitch-label" for="myonoffswitch1">
+                                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch2-1">
+                                    <label class="onoffswitch-label" for="myonoffswitch2-1">
                                     <span class="onoffswitch-inner"></span>
                                     <span class="onoffswitch-switch"></span>
                                     </label>
@@ -45,10 +103,24 @@
                             <td>
                                 Sasi
                             </td>
-                            <td>
+                            <td class="menu-toggle">
                                 <div class="onoffswitch">
-                                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch2">
-                                    <label class="onoffswitch-label" for="myonoffswitch2">
+                                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch2-2">
+                                    <label class="onoffswitch-label" for="myonoffswitch2-2">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Harvey
+                            </td>
+                            <td class="menu-toggle">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch2-3">
+                                    <label class="onoffswitch-label" for="myonoffswitch2-3">
                                         <span class="onoffswitch-inner"></span>
                                         <span class="onoffswitch-switch"></span>
                                     </label>
@@ -56,23 +128,12 @@
                             </td>
                         </tr>
 
-                            </table>
-                            <!--<ul>-->
-                        <!--<li>-->
-                            <!--<div class="menu-people-name">Ray</div>-->
-                            <!--<div class="onoffswitch">-->
-                                <!--<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">-->
-                                <!--<label class="onoffswitch-label" for="myonoffswitch">-->
-                                    <!--<span class="onoffswitch-inner"></span>-->
-                                    <!--<span class="onoffswitch-switch"></span>-->
-                                <!--</label>-->
-                            <!--</div>-->
-                        <!--</li>-->
-                    <!--</ul>-->
-
+                    </table>
                 </div>
 
             </div>
+
+
 
         </div>
 
@@ -80,7 +141,8 @@
 
     <div class="footer">
         <div class="total">
-            Total <span class="total-amount">$37.00</span>
+            Total <span id="total-amount" class="total-amount">$37.00</span>
+            <button onclick="payall()">Pay All</button>
         </div>
         <div class="total-person">
             <ul>
@@ -104,7 +166,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
-<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script src="js/bill.js"></script>
 
 </body>
 </html>
