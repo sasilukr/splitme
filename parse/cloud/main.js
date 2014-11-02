@@ -69,6 +69,11 @@ app.all('/SubmitHostedPayment', function(request, response) {
     var newPaymentId = new PaymentIds();
     newPaymentId.save({amount:amount,payer:payer,paid:paid}, {
         success: function (data) {
+
+            var redirectUri = request.query.payer ? 'http://splitme.parseapp.com/PaymentComplete/'+data.id : 'http://splitme.parseapp.com/thankyou.html';
+
+            console.log(redirectUri);
+
             var xmlBody = '<?xml version="1.0" encoding="utf-8"?>\
         <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">\
     <soap:Body>\
@@ -82,7 +87,7 @@ app.all('/SubmitHostedPayment', function(request, response) {
     <TranType>Sale</TranType>\
     <Frequency>OneTime</Frequency>\
     <Memo>SplitMe Payment</Memo>\
-    <ProcessCompleteUrl>' + request.query.payer ? 'http://splitme.parseapp.com/PaymentComplete/'+data.id : '/thankyou.html' +'</ProcessCompleteUrl>\
+    <ProcessCompleteUrl>' + redirectUri +'</ProcessCompleteUrl>\
     <ReturnUrl>http://splitme.parseapp.com/bill.html</ReturnUrl>\
     <OperatorID>dano</OperatorID>\
     </request>\
