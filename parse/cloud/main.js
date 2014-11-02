@@ -82,7 +82,7 @@ app.all('/SubmitHostedPayment', function(request, response) {
     <TranType>Sale</TranType>\
     <Frequency>OneTime</Frequency>\
     <Memo>SplitMe Payment</Memo>\
-    <ProcessCompleteUrl>http://splitme.parseapp.com/PaymentComplete/'+data.id+'</ProcessCompleteUrl>\
+    <ProcessCompleteUrl>' + request.query.payer ? 'http://splitme.parseapp.com/PaymentComplete/'+data.id : '/thankyou.html' +'</ProcessCompleteUrl>\
     <ReturnUrl>http://splitme.parseapp.com/bill.html</ReturnUrl>\
     <OperatorID>dano</OperatorID>\
     </request>\
