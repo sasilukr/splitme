@@ -70,7 +70,7 @@ app.all('/SubmitHostedPayment', function(request, response) {
     newPaymentId.save({amount:amount,payer:payer,paid:paid}, {
         success: function (data) {
 
-            var redirectUri = request.query.payer ? 'http://splitme.parseapp.com/PaymentComplete/'+data.id : 'http://splitme.parseapp.com/thankyou.html';
+            var redirectUri = request.query.payer ? 'http://splitme.parseapp.com/PaymentComplete/'+data.id : 'http://splitme.parseapp.com/';
 
             console.log(redirectUri);
 
