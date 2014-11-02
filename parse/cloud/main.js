@@ -59,7 +59,9 @@ app.get('/SubmitClearPayment', function(request, response) {
 
 app.all('/SubmitHostedPayment', function(request, response) {
     console.log('In SubmitPayment');
-    var amount = request.params.amount ? request.params.amount : (request.query.amount ? request.query.amount : 0);
+    var amount = request.query.amount ? request.query.amount : 0;
+    var payer = request.query.payer ? request.query.payer : '';
+    var paid = request.query.paid ? request.query.paid + ',' + payer : payer;
 
     console.log('Charging for amount: ' + amount);
 
@@ -76,8 +78,8 @@ app.all('/SubmitHostedPayment', function(request, response) {
     <TranType>Sale</TranType>\
     <Frequency>OneTime</Frequency>\
     <Memo>SplitMe Payment</Memo>\
-    <ProcessCompleteUrl>http://splitme.parseapp.com/PaymentComplete</ProcessCompleteUrl>\
-    <ReturnUrl>http://splitme.parseapp.com/PaymentReturn</ReturnUrl>\
+    <ProcessCompleteUrl>http://splitme.parseapp.com/bill.html?amount='+amount+'&payer='+payer+'&paid='+paid+'</ProcessCompleteUrl>\
+    <ReturnUrl>http://splitme.parseapp.com/bill.html</ReturnUrl>\
     <OperatorID>dano</OperatorID>\
     </request>\
     </InitializePayment>\
