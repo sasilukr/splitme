@@ -26,14 +26,13 @@
       <file leaf-file-name="bill.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bill.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.37037" vertical-offset="1457" max-vertical-offset="2466">
-              <caret line="113" column="24" selection-start-line="113" selection-start-column="24" selection-end-line="113" selection-end-column="24" />
+            <state vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="2034">
+              <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
               <folding>
                 <element signature="tag#head#0;tag#html#0" expanded="true" />
                 <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="true" />
                 <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
                 <element signature="tag#div#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
-                <element signature="tag#div#1;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
                 <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
                 <element signature="tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
                 <element signature="tag#div#2;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
@@ -56,11 +55,30 @@
                 <element signature="tag#div#0;tag#td#1;tag#tr#2;tag#table#0;tag#div#2;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
                 <element signature="tag#input#0;tag#div#0;tag#td#1;tag#tr#2;tag#table#0;tag#div#2;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
                 <element signature="tag#label#0;tag#div#0;tag#td#1;tag#tr#2;tag#table#0;tag#div#2;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#div#0;tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#div#0;tag#div#0;tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#div#1;tag#div#0;tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#div#1;tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#div#0;tag#div#1;tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#div#1;tag#div#1;tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#div#2;tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#div#0;tag#div#2;tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#div#0;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#div#1;tag#div#0;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#div#2;tag#div#0;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#div#1;tag#body#0;tag#html#0" expanded="true" />
                 <element signature="tag#div#0;tag#div#1;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#ul#0;tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="true" />
                 <element signature="tag#li#0;tag#ul#0;tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="true" />
                 <element signature="tag#button#0;tag#li#0;tag#ul#0;tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="true" />
                 <element signature="tag#li#1;tag#ul#0;tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="true" />
                 <element signature="tag#button#0;tag#li#1;tag#ul#0;tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#li#2;tag#ul#0;tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#button#0;tag#li#2;tag#ul#0;tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -84,12 +102,10 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.3703704" vertical-offset="89" max-vertical-offset="1098">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state vertical-scroll-proportion="-12.0" vertical-offset="36" max-vertical-offset="1152">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
               <folding>
-                <element signature="tag#body#0;tag#html#0" expanded="true" />
-                <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="true" />
-                <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#head#0;tag#html#0" expanded="true" />
                 <element signature="tag#select#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
                 <element signature="tag#select#1;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
               </folding>
@@ -97,27 +113,62 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="splitme.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="addcustomer.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addcustomer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-76.666664" vertical-offset="0" max-vertical-offset="2448">
+              <caret line="122" column="41" selection-start-line="122" selection-start-column="41" selection-end-line="122" selection-end-column="41" />
+              <folding>
+                <element signature="tag#head#0;tag#html#0" expanded="true" />
+                <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#div#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#div#1;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#span#0;tag#div#1;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#script#2;tag#body#0;tag#html#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="splitme.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/splitme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3014" max-vertical-offset="3816">
-              <caret line="186" column="20" selection-start-line="186" selection-start-column="20" selection-end-line="186" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.35910225" vertical-offset="1404" max-vertical-offset="4734">
+              <caret line="94" column="18" selection-start-line="94" selection-start-column="18" selection-end-line="94" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bill.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="thankyou.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/thankyou.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.0" vertical-offset="0" max-vertical-offset="630">
+              <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+              <folding>
+                <element signature="tag#head#0;tag#html#0" expanded="true" />
+                <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#div#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#div#1;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bill.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/bill.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.76804125" vertical-offset="3076" max-vertical-offset="4302">
-              <caret line="203" column="23" selection-start-line="203" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
+            <state vertical-scroll-proportion="-2.7692308" vertical-offset="0" max-vertical-offset="4896">
+              <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
               <folding>
-                <element signature="e#601#1858#0" expanded="true" />
+                <element signature="e#601#2564#0" expanded="true" />
                 <element signature="n#!!block;n#drawCard#0" expanded="true" />
                 <element signature="n#!!block;n#updateTotal#0" expanded="true" />
                 <element signature="n#!!block;n#togglePay#0" expanded="true" />
                 <element signature="n#!!block;n#payall#0" expanded="true" />
+                <element signature="n#!!block;n#pay#0" expanded="true" />
                 <element signature="n#!!block;n#getParameterByName#0" expanded="true" />
                 <element signature="n#!!block;n#setCookie#0" expanded="true" />
                 <element signature="n#!!block;n#getCookie#0" expanded="true" />
@@ -136,12 +187,14 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/pay.html" />
         <option value="$PROJECT_DIR$/css/div" />
-        <option value="$PROJECT_DIR$/css/splitme.css" />
-        <option value="$PROJECT_DIR$/bill.html" />
         <option value="$PROJECT_DIR$/js/bill.js" />
+        <option value="$PROJECT_DIR$/thankyou.html" />
+        <option value="$PROJECT_DIR$/bill.html" />
+        <option value="$PROJECT_DIR$/addcustomer.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/splitme.css" />
       </list>
     </option>
   </component>
@@ -229,6 +282,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
@@ -291,7 +345,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24947146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24947146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -353,51 +407,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/bill.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.3703704" vertical-offset="89" max-vertical-offset="1098">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state vertical-scroll-proportion="-2.7692308" vertical-offset="0" max-vertical-offset="4896">
+          <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
           <folding>
-            <element signature="tag#body#0;tag#html#0" expanded="true" />
-            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="true" />
-            <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
-            <element signature="tag#select#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
-            <element signature="tag#select#1;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/splitme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3014" max-vertical-offset="3816">
-          <caret line="186" column="20" selection-start-line="186" selection-start-column="20" selection-end-line="186" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pay.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="558">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-          <folding>
-            <element signature="tag#head#0;tag#html#0" expanded="true" />
-            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="true" />
-            <element signature="tag#p#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
-            <element signature="tag#input#0;tag#p#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="e#601#2564#0" expanded="true" />
+            <element signature="n#!!block;n#drawCard#0" expanded="true" />
+            <element signature="n#!!block;n#updateTotal#0" expanded="true" />
+            <element signature="n#!!block;n#togglePay#0" expanded="true" />
+            <element signature="n#!!block;n#payall#0" expanded="true" />
+            <element signature="n#!!block;n#pay#0" expanded="true" />
+            <element signature="n#!!block;n#getParameterByName#0" expanded="true" />
+            <element signature="n#!!block;n#setCookie#0" expanded="true" />
+            <element signature="n#!!block;n#getCookie#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bill.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.37037" vertical-offset="1457" max-vertical-offset="2466">
-          <caret line="113" column="24" selection-start-line="113" selection-start-column="24" selection-end-line="113" selection-end-column="24" />
+        <state vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="2034">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
           <folding>
             <element signature="tag#head#0;tag#html#0" expanded="true" />
             <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="true" />
             <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
             <element signature="tag#div#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
-            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
             <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
             <element signature="tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
             <element signature="tag#div#2;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
@@ -420,29 +456,94 @@
             <element signature="tag#div#0;tag#td#1;tag#tr#2;tag#table#0;tag#div#2;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
             <element signature="tag#input#0;tag#div#0;tag#td#1;tag#tr#2;tag#table#0;tag#div#2;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
             <element signature="tag#label#0;tag#div#0;tag#td#1;tag#tr#2;tag#table#0;tag#div#2;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#0;tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#0;tag#div#0;tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#1;tag#div#0;tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#1;tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#0;tag#div#1;tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#1;tag#div#1;tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#2;tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#0;tag#div#2;tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#0;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#1;tag#div#0;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#2;tag#div#0;tag#div#1;tag#div#2;tag#div#2;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#1;tag#body#0;tag#html#0" expanded="true" />
             <element signature="tag#div#0;tag#div#1;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#ul#0;tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="true" />
             <element signature="tag#li#0;tag#ul#0;tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="true" />
             <element signature="tag#button#0;tag#li#0;tag#ul#0;tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="true" />
             <element signature="tag#li#1;tag#ul#0;tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="true" />
             <element signature="tag#button#0;tag#li#1;tag#ul#0;tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#li#2;tag#ul#0;tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#button#0;tag#li#2;tag#ul#0;tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/bill.js">
+    <entry file="file://$PROJECT_DIR$/pay.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76804125" vertical-offset="3076" max-vertical-offset="4302">
-          <caret line="203" column="23" selection-start-line="203" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
+        <state vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="558">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
           <folding>
-            <element signature="e#601#1858#0" expanded="true" />
-            <element signature="n#!!block;n#drawCard#0" expanded="true" />
-            <element signature="n#!!block;n#updateTotal#0" expanded="true" />
-            <element signature="n#!!block;n#togglePay#0" expanded="true" />
-            <element signature="n#!!block;n#payall#0" expanded="true" />
-            <element signature="n#!!block;n#getParameterByName#0" expanded="true" />
-            <element signature="n#!!block;n#setCookie#0" expanded="true" />
-            <element signature="n#!!block;n#getCookie#0" expanded="true" />
+            <element signature="tag#head#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#p#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#input#0;tag#p#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addcustomer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-76.666664" vertical-offset="0" max-vertical-offset="2448">
+          <caret line="122" column="41" selection-start-line="122" selection-start-column="41" selection-end-line="122" selection-end-column="41" />
+          <folding>
+            <element signature="tag#head#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#span#0;tag#div#1;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#script#2;tag#body#0;tag#html#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thankyou.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.0" vertical-offset="0" max-vertical-offset="630">
+          <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+          <folding>
+            <element signature="tag#head#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.0" vertical-offset="36" max-vertical-offset="1152">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="tag#head#0;tag#html#0" expanded="true" />
+            <element signature="tag#select#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#select#1;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/splitme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35910225" vertical-offset="1404" max-vertical-offset="4734">
+          <caret line="94" column="18" selection-start-line="94" selection-start-column="18" selection-end-line="94" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>

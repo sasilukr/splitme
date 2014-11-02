@@ -31,31 +31,60 @@ $( document ).ready(function() {
         var originalTotal = $("#total-amount").text().split("$")[1];
         var paidAmount = 0;
         var paidUsers = getParameterByName("paid").split(",");
-        console.log("paidUsers " + paidUsers);
-        for (var i = 0; i < paidUsers.length; i++) {
-            switch (paidUsers[i]) {
-                case "Ray":
-                    paidAmount += $("#total-person-0").text().split("$")[1];
-                    $("#total-person-0").text("All Set");
-                    break;
-                case "Sasi":
-                    paidAmount += $("#total-person-0").text().split("$")[1];
-                    $("#total-person-1").text("All Set");
-                    break;
-                case "Harvey":
-                    paidAmount += $("#total-person-0").text().split("$")[1];
-                    $("#total-person-2").text("All Set");
-                    break;
-            }
-        }
 
-        var newTotal = originalTotal - paidAmount;
-        $("#total-amount").text("$" + newTotal);
 
         cost = JSON.parse(getCookie(cookieName));
         console.log("Cost " + cost);
 
         // TODO update toggle options
+
+        for ( var i=0; i < cost.length; i++ ) {
+            var j;
+            var switchId;
+
+            if ( cost[i].p1 > 0 ) {
+                j = 0;
+                switchId = "myonoffswitch" + i + "-" + j;
+                $("#" + switchId).click();
+            }
+            if ( cost[i].p2 > 0 ) {
+                j = 1;
+                switchId = "myonoffswitch" + i + "-" + j;
+                $("#" + switchId).click();
+
+            }
+            if ( cost[i].p3 > 0 ) {
+                j = 2;
+                switchId = "myonoffswitch" + i + "-" + j;
+                $("#" + switchId).click();
+
+            }
+
+        }
+
+        console.log("paidUsers " + paidUsers);
+        for (var i = 0; i < paidUsers.length; i++) {
+            switch (paidUsers[i]) {
+                case "Ray":
+                    paidAmount += parseFloat($("#total-person-0").text().split("$")[1]);
+                    $("#total-person-0").text("All Set");
+                    break;
+                case "Sasi":
+                    paidAmount += parseFloat($("#total-person-1").text().split("$")[1]);
+                    $("#total-person-1").text("All Set");
+                    break;
+                case "Harvey":
+                    paidAmount += parseFloat($("#total-person-2").text().split("$")[1]);
+                    $("#total-person-2").text("All Set");
+                    break;
+            }
+        }
+
+
+
+        var newTotal = parseFloat(originalTotal) - parseFloat(paidAmount);
+        $("#total-amount").text("$" + newTotal.toFixed(2));
+
     } else {
         setCookie(cookieName, "");
     }
@@ -157,7 +186,11 @@ function togglePay(ndx, person) {
     var p2 = costObj.p2 > 0 ? 1 : 0;
     var p3 = costObj.p3 > 0 ? 1 : 0;
 
-    var divider = p1 + p2 + p3 + 1;
+    var extra = 1;
+    if ( getParameterByName("paid") ) {
+        extra = 0;
+    }
+    var divider = p1 + p2 + p3 + extra;
     var costPP = orderPrice / divider;
     switch (person) {
         case 0:
