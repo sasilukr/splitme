@@ -2,8 +2,8 @@
 h1 {
     color: white;
     font-family: 'Yellowtail', cursive;
-    font-size: 60px;
-    margin: 0;
+    font-size: 120px;
+    margin: auto;
 }
 
 h2 {
@@ -49,20 +49,24 @@ td {
     float: right;
 }
 
+.btn {
+    font-size: 50px;
+    height: 130px;
+    padding: 10px 40px;
+}
 .btn-split {
     background-color: rgb(247, 225, 117);
-    padding: 6px 28px;
 }
 
 .btn-tip {
     font-size: 40px;
 }
 
-.btn-group.selected>.btn {
+.btn-group.selected>.btn-tip {
     background-color: blue;
 }
 
-.btn-group>.btn {
+.btn-group>.btn-tip {
     background-color: white;
 }
 .card {
@@ -86,6 +90,12 @@ td {
     float: left;
 }
 
+.form-control {
+    font-size: 50px;
+    height: 130px;
+}
+
+
 .footer {
     position: fixed;
     /*height: 120px;*/
@@ -108,6 +118,15 @@ td {
     linear-gradient(
             #701314 50%, #560f10
     );
+
+    background: -moz-linear-gradient(#701314, #560f10); /* FF 3.6+ */
+    background: -ms-linear-gradient(#701314, #560f10); /* IE10 */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #701314), color-stop(100%, #560f10)); /* Safari 4+, Chrome 2+ */
+    background: -webkit-linear-gradient(#701314, #560f10); /* Safari 5.1+, Chrome 10+ */
+    background: -o-linear-gradient(#701314, #560f10); /* Opera 11.10 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#701314', endColorstr=#560f10); /* IE6 & IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#701314', endColorstr=#560f10)"; /* IE8+ */
+    background: linear-gradient(#701314, #560f10); /* the standard */
 }
 
 .logo {
