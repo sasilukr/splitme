@@ -29,7 +29,7 @@ app.get('/SubmitClearPayment', function(request, response) {
     var bodyJson = {
         "InvoiceNo":"1",
         "RefNo":"1",
-        "Memo":"Team2 Money2020",
+        "Memo":"SplitMe Payment",
         "Purchase":"1.00",
         "AccountSource":"Swiped",
         "AcctNo":"5499990123456781",
@@ -71,9 +71,9 @@ app.get('/SubmitHostedPayment', function(request, response) {
     <TaxAmount>0</TaxAmount>\
     <TranType>Sale</TranType>\
     <Frequency>OneTime</Frequency>\
-    <Memo>Team1 money2020</Memo>\
-    <ProcessCompleteUrl>http://localhost/test.html</ProcessCompleteUrl>\
-    <ReturnUrl>http://localhost/test.html</ReturnUrl>\
+    <Memo>SplitMe Payment</Memo>\
+    <ProcessCompleteUrl>http://splitme.parseapp.com/paymentcomplete.html</ProcessCompleteUrl>\
+    <ReturnUrl>http://splitme.parseapp.com/paymenthook.html</ReturnUrl>\
     <OperatorID>dano</OperatorID>\
     </request>\
     </InitializePayment>\
