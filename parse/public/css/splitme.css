@@ -11,6 +11,10 @@ h2 {
     font-size: 60px;
 }
 
+h5 {
+    font-size: 50px;
+}
+
 body {
     margin-bottom: 120px;
     font-size: 48px;
@@ -50,6 +54,17 @@ td {
     padding: 6px 28px;
 }
 
+.btn-tip {
+    font-size: 40px;
+}
+
+.btn-group.selected>.btn {
+    background-color: blue;
+}
+
+.btn-group>.btn {
+    background-color: white;
+}
 .card {
     border-radius: 15px;
     background-color: white;
@@ -64,7 +79,7 @@ td {
     /*width: 100%;*/
     width: 98%;
     margin: auto;
-    margin-bottom: 234px;
+    margin-bottom: 350px;
 }
 
 .dish-name {
@@ -154,7 +169,21 @@ td {
     line-height: 1.5;
 
 }
+.subtotal {
+    color: black;
+    width: 60%;
+    text-align: center;
+    margin: auto;
+}
 
+.subtotal-left, .tax-left, .tip-left{
+    float: left;
+    clear: both;
+}
+
+.subtotal-right, .tax-right, .tip-right{
+    float: right;
+}
 
 /****** TOGGLE SWTICH *****/
 .onoffswitch {
