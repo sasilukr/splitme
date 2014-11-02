@@ -70,7 +70,7 @@ app.all('/SubmitHostedPayment', function(request, response) {
     newPaymentId.save({amount:amount,payer:payer,paid:paid}, {
         success: function (data) {
 
-            var redirectUri = request.query.payer ? 'http://splitme.parseapp.com/PaymentComplete/'+data.id : 'http://splitme.parseapp.com/';
+            var redirectUri = request.query.payer ? 'http://splitme.parseapp.com/PaymentComplete/'+data.id : 'http://splitme.parseapp.com/PayAllComplete';
 
             console.log(redirectUri);
 
@@ -130,7 +130,11 @@ app.all('/SubmitHostedPayment', function(request, response) {
     });
 });
 
-app.post('/PaymentComplete/:objectId', function(request, response) {
+app.post('/PayAllComplete', function(request, response) {
+   response.redirect('/thankyou.html');
+});
+
+    app.post('/PaymentComplete/:objectId', function(request, response) {
     console.log('Payment Complete: '+request.params.objectId);
     var PaymentIds = Parse.Object.extend("PaymentIds");
     var query = new Parse.Query(PaymentIds);
