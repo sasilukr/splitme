@@ -179,44 +179,44 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="https://cdn.firebase.com/js/client/1.1.3/firebase.js"></script>
-    <script>
-        var myFirebaseRef = new Firebase("https://splitme.firebaseio.com/");
-    </script>
+    <!--<script src="https://cdn.firebase.com/js/client/1.1.3/firebase.js"></script>-->
+    <!--<script>-->
+        <!--var myFirebaseRef = new Firebase("https://splitme.firebaseio.com/");-->
+    <!--</script>-->
 
 <script src="js/bill.js"></script>
     <script type="application/javascript">
 
-        myFirebaseRef.child("splitterName").on("value", function(snapshot) {
-            //alert(JSON.stringify(snapshot.val()));  // Alerts "San Francisco"
-            //alert(JSON.stringify(Object.keys(snapshot.val())));
-
-            var userList = $('.total-person ul li');
-            var paidStr = '';
-            var refreshRequired = false;
-            var snapshotItem = snapshot.val();
-console.log(userList);
-            var keyNames = Object.keys(snapshotItem);
-            keyNames.forEach(function(item,idx,arr){
-//                userList.forEach(function(item2,idx2,arr2){
-//                    if(item2.search(item) > -1 ){
-//                        //the user has been found
-//                        if(snapshotItem.item){
-//                            paidStr = paidStr + item + ',';
-//                        }
-////                        if($(item2).find('button span').text() != 'All Set' && (snapshot.val())[item]){
-////                            refreshRequired = true;
-////                        } else if($(item2).find('button span').text() == 'All Set' && !((snapshot.val())[item])){
-////                            refreshRequired = true;
-////                        }
+//        myFirebaseRef.child("splitterName").on("value", function(snapshot) {
+//            //alert(JSON.stringify(snapshot.val()));  // Alerts "San Francisco"
+//            //alert(JSON.stringify(Object.keys(snapshot.val())));
 //
-//                    }
+//            var userList = $('.total-person ul li');
+//            var paidStr = '';
+//            var refreshRequired = false;
+//            var snapshotItem = snapshot.val();
+//console.log(userList);
+//            var keyNames = Object.keys(snapshotItem);
+//            keyNames.forEach(function(item,idx,arr){
+//                userList.forEach(function(item2,idx2,arr2){
+////                    if(item2.search(item) > -1 ){
+////                        //the user has been found
+////                        if(snapshotItem.item){
+////                            paidStr = paidStr + item + ',';
+////                        }
+//////                        if($(item2).find('button span').text() != 'All Set' && (snapshot.val())[item]){
+//////                            refreshRequired = true;
+//////                        } else if($(item2).find('button span').text() == 'All Set' && !((snapshot.val())[item])){
+//////                            refreshRequired = true;
+//////                        }
+////
+////                    }
 //                });
-            });
-            if(refreshRequired){
-                window.location = '/bill.html?paid=' +paidStr;
-            }
-        });
+//            });
+//            if(refreshRequired){
+//                window.location = '/bill.html?paid=' +paidStr;
+//            }
+//        });
 //
 //        var nameArray = [];
 //
