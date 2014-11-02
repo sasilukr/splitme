@@ -99,8 +99,8 @@ td {
 .footer {
     position: fixed;
     /*height: 120px;*/
-    background-color: #f9db48;
-    color: black;
+    background-color: green;
+    color: white;
     bottom: 0;
     width: 100%;
     padding: 10px 30px;
@@ -154,7 +154,8 @@ td {
 }
 
 .menu-people>table {
-    width: 100%;
+    width: 83%;
+    margin-top: 20px;
 }
 
 .menu-people-name {
@@ -186,7 +187,14 @@ td {
     margin-left: 10px;
     margin-top: 10px;
     line-height: 1.3;
+}
 
+.btn.total-person-amount, .btn.total-all-amount {
+    background-color: white;
+    padding: 6px 40px;
+    height: auto;
+    border-radius: 10px;
+    color: green;
 }
 .subtotal {
     color: white;
@@ -204,9 +212,14 @@ td {
     float: right;
 }
 
+.tip-right {
+    color: black;
+}
+
 /****** TOGGLE SWTICH *****/
 .onoffswitch {
     position: relative; width: 200px;
+    /*float: right;*/
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
 }
 .onoffswitch-checkbox {
@@ -222,7 +235,7 @@ td {
     -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
 }
 .onoffswitch-inner:before, .onoffswitch-inner:after {
-    display: block; float: left; width: 50%; height: 53px; padding: 0; line-height: 53px;
+    display: block; float: left; width: 50%; height: 75px; padding: 0; line-height: 75px;
     font-size: 40px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
     -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
