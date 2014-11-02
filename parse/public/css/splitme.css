@@ -99,8 +99,8 @@ td {
 .footer {
     position: fixed;
     /*height: 120px;*/
-    background-color: #f9db48;
-    color: black;
+    background-color: green;
+    color: white;
     bottom: 0;
     width: 100%;
     padding: 10px 30px;
