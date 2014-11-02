@@ -55,7 +55,7 @@ td {
     padding: 10px 40px;
 }
 .btn-split {
-    background-color: rgb(247, 225, 117);
+    background-color: #f9db48;
 }
 
 .btn-tip {
@@ -99,7 +99,7 @@ td {
 .footer {
     position: fixed;
     /*height: 120px;*/
-    background-color: white;
+    background-color: #f9db48;
     color: black;
     bottom: 0;
     width: 100%;
@@ -189,7 +189,7 @@ td {
 
 }
 .subtotal {
-    color: black;
+    color: white;
     width: 60%;
     text-align: center;
     margin: auto;
