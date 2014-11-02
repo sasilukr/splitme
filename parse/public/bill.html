@@ -91,19 +91,28 @@
 
     <div class="footer">
         <div class="total">
-            Total <span id="total-amount" class="total-amount">$0.00</span>
+            Total <span id="total-amount" class="total-amount">$0.00</span><br/>
             <button onclick="payall()">Pay All</button>
         </div>
         <div class="total-person">
             <ul>
                 <li>
-                    Ray <span class="total-person-amount" id="total-person-1">$0.00</span>
+                    Ray
+                    <button class="total-person-amount" onclick="pay(0)">
+                        <span id="total-person-0">$0.00</span>
+                    </button>
                 </li>
                 <li>
-                    Sasi <span class="total-person-amount" id="total-person-2">$0.00</span>
+                    Sasi
+                    <button class="total-person-amount" onclick="pay(1)">
+                        <span id="total-person-1">$0.00</span>
+                    </button>
                 </li>
                 <li>
-                    Harvey <span class="total-person-amount" id="total-person-3">$0.00</span>
+                    Harvey
+                    <button class="total-person-amount" onclick="pay(2)">
+                        <span id="total-person-2">$0.00</span>
+                    </button>
                 </li>
             </ul>
         </div>

@@ -1,8 +1,3 @@
-$( document ).ready(function() {
-    drawCard();
-    updateTotal();
-
-});
 
 var order = [
     {name: "Double Bypass Burger", price: 12.03},
@@ -25,6 +20,39 @@ var cost = [
 
 var tax = 1.081;
 var tip = 1.15;
+
+$( document ).ready(function() {
+    drawCard();
+    updateTotal();
+    if ( getParameterByName("paid") ) {
+
+        var originalTotal = $("#total-amount").text().split("$")[1];
+        var paidAmount = 0;
+        var paidUsers = getParameterByName("paid").split(",");
+        console.log("paidUsers " + paidUsers);
+        for (var i = 0; i < paidUsers.length; i++) {
+            switch (paidUsers[i]) {
+                case "Ray":
+                    paidAmount += $("#total-person-0").text().split("$")[1];
+                    $("#total-person-0").text("All Set");
+                    break;
+                case "Sasi":
+                    paidAmount += $("#total-person-0").text().split("$")[1];
+                    $("#total-person-1").text("All Set");
+                    break;
+                case "Harvey":
+                    paidAmount += $("#total-person-0").text().split("$")[1];
+                    $("#total-person-2").text("All Set");
+                    break;
+            }
+        }
+
+        var newTotal = originalTotal - paidAmount;
+        $("#total-amount").text("$" + newTotal);
+    }
+
+});
+
 
 
 function drawCard() {
@@ -104,9 +132,9 @@ function updateTotal() {
     p3 = (p3 * tip).toFixed(2);
     total = (total * tip).toFixed(2);
 
-    $("#total-person-1").text("$" + p1);
-    $("#total-person-2").text("$" + p2);
-    $("#total-person-3").text("$" + p3);
+    $("#total-person-0").text("Pay $" + p1);
+    $("#total-person-1").text("Pay $" + p2);
+    $("#total-person-2").text("Pay $" + p3);
 
     $("#total-amount").text("$" + total);
 
@@ -148,7 +176,23 @@ function togglePay(ndx, person) {
 }
 
 function payall() {
-    var total = $("#total-amount").text().substring(1);
+    var total = $("#total-amount").text().split("$")[1];
     var url = "/SubmitHostedPayment?amount=" + total;
     window.location = url;
+}
+
+function pay(person) {
+    var total = $("#total-person-" + person).text().split("$")[1];
+    var url = "/SubmitHostedPayment?amount=" + total + "&payer=" + people[person];
+
+    console.log("pay url " + url);
+    window.location = url;
+}
+
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
