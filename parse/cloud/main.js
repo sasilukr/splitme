@@ -1,6 +1,7 @@
 var express = require('express');
 var _ = require('underscore');
 var querystring = require('querystring');
+var xmldoc = require('cloud/xmldoc.js');
 
 /**
  * Create an express application instance
@@ -72,8 +73,8 @@ app.get('/SubmitHostedPayment', function(request, response) {
     <TranType>Sale</TranType>\
     <Frequency>OneTime</Frequency>\
     <Memo>SplitMe Payment</Memo>\
-    <ProcessCompleteUrl>http://splitme.parseapp.com/paymentcomplete.html</ProcessCompleteUrl>\
-    <ReturnUrl>http://splitme.parseapp.com/paymenthook.html</ReturnUrl>\
+    <ProcessCompleteUrl>http://splitme.parseapp.com/PaymentComplete</ProcessCompleteUrl>\
+    <ReturnUrl>http://splitme.parseapp.com/PaymentReturn</ReturnUrl>\
     <OperatorID>dano</OperatorID>\
     </request>\
     </InitializePayment>\
@@ -92,7 +93,12 @@ app.get('/SubmitHostedPayment', function(request, response) {
             //
             //response.json(responseJson);
             //<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><InitializePaymentResponse xmlns="http://www.mercurypay.com/"><InitializePaymentResult><ResponseCode>0</ResponseCode><PaymentID>d20eb481-d7be-4d91-b1ff-c47c3dfbd150</PaymentID><Message>Initialize Successful</Message></InitializePaymentResult></InitializePaymentResponse></soap:Body></soap:Envelope>
-            response.end(httpResponse.text);
+
+            //response.end(httpResponse.text);
+            var document = new xmldoc.XmlDocument(httpResponse.text);
+            var PaymentID = document.valueWithPath('soap:Body.InitializePaymentResponse.InitializePaymentResult.PaymentID');
+            console.log('HostedCheckout PaymentId: ' + PaymentID);
+            response.end(PaymentID);
         },
         error: function (httpResponse) {
             console.error(httpResponse.text);
@@ -102,6 +108,63 @@ app.get('/SubmitHostedPayment', function(request, response) {
     });
 });
 
+app.post('/PaymentComplete', function(request, response) {
+    console.log('Payment Complete');
+    response.end('Payment Complete');
+});
+
+app.get('/PaymentReturn', function(request, response) {
+    console.log('Payment Return');
+    response.end('Payment Return');
+});
+
+app.post('/PaymentReturn', function(request, response) {
+    console.log('Payment Return');
+    response.end('Payment Return');
+});
+
+app.get('/VerifyPayment', function(request, response) {
+    console.log('In SubmitPayment');
+
+    var xmlBody = '<?xml version="1.0" encoding="utf-8"?>\
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">\
+  <soap:Body>\
+    <VerifyPayment xmlns="http://www.mercurypay.com/">\
+      <request>\
+        <MerchantID>013163015566916</MerchantID>\
+        <Password>ypBj@f@zt3fJRX,k</Password>\
+        <PaymentID>d20eb481-d7be-4d91-b1ff-c47c3dfbd150</PaymentID>\
+      </request>\
+    </VerifyPayment>\
+  </soap:Body>\
+</soap:Envelope>';
+
+    Parse.Cloud.httpRequest({
+        url: 'https://hc.mercurydev.net/hcws/hcservice.asmx',
+        method: "POST",
+        headers: { 'Content-Type': 'text/xml',
+            'SOAPAction':'http://www.mercurypay.com/VerifyPayment'},
+        body: xmlBody,
+        success: function (httpResponse) {
+            console.log(httpResponse.text);
+            //var responseJson = JSON.parse(httpResponse.text);
+            //
+            //response.json(responseJson);
+            //<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><InitializePaymentResponse xmlns="http://www.mercurypay.com/"><InitializePaymentResult><ResponseCode>0</ResponseCode><PaymentID>d20eb481-d7be-4d91-b1ff-c47c3dfbd150</PaymentID><Message>Initialize Successful</Message></InitializePaymentResult></InitializePaymentResponse></soap:Body></soap:Envelope>
+
+            response.end(httpResponse.text);
+            // var document = new xmldoc.XmlDocument(httpResponse.text);
+            // var PaymentID = document.valueWithPath('soap:Body.InitializePaymentResponse.InitializePaymentResult.PaymentID');
+            // console.log('HostedCheckout PaymentId: ' + PaymentID);
+            // response.end(PaymentID);
+        },
+        error: function (httpResponse) {
+            console.error(httpResponse.text);
+            //response.json(responseJson);
+            response.end(httpResponse.text);
+        }
+    });
+});
 
 // Attach the Express app to your Cloud Code
 app.listen();
