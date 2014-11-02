@@ -20,7 +20,7 @@ restrictedAcl.setPublicWriteAccess(false);
 /**
  * Global app configuration section
  */
-//app.set('views', 'cloud/views');  // Specify the folder to find templates
+app.set('views', 'cloud/views');  // Specify the folder to find templates
 app.set('view engine', 'ejs');    // Set the template engine
 app.use(express.bodyParser());    // Middleware for reading request body
 
@@ -57,8 +57,11 @@ app.get('/SubmitClearPayment', function(request, response) {
     });
 });
 
-app.get('/SubmitHostedPayment', function(request, response) {
+app.all('/SubmitHostedPayment', function(request, response) {
     console.log('In SubmitPayment');
+    var amount = request.params.amount ? request.params.amount : (request.query.amount ? request.query.amount : 0);
+
+    console.log('Charging for amount: ' + amount);
 
     var xmlBody = '<?xml version="1.0" encoding="utf-8"?>\
         <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">\
@@ -68,7 +71,7 @@ app.get('/SubmitHostedPayment', function(request, response) {
     <MerchantID>013163015566916</MerchantID>\
     <Password>ypBj@f@zt3fJRX,k</Password>\
     <Invoice>1234</Invoice>\
-    <TotalAmount>2.22</TotalAmount>\
+    <TotalAmount>' + amount + '</TotalAmount>\
     <TaxAmount>0</TaxAmount>\
     <TranType>Sale</TranType>\
     <Frequency>OneTime</Frequency>\
@@ -98,7 +101,11 @@ app.get('/SubmitHostedPayment', function(request, response) {
             var document = new xmldoc.XmlDocument(httpResponse.text);
             var PaymentID = document.valueWithPath('soap:Body.InitializePaymentResponse.InitializePaymentResult.PaymentID');
             console.log('HostedCheckout PaymentId: ' + PaymentID);
-            response.end(PaymentID);
+            //response.end(PaymentID);
+
+            response.render('hostedredirect', {
+                PaymentId: PaymentID
+            });
         },
         error: function (httpResponse) {
             console.error(httpResponse.text);
@@ -113,12 +120,7 @@ app.post('/PaymentComplete', function(request, response) {
     response.end('Payment Complete');
 });
 
-app.get('/PaymentReturn', function(request, response) {
-    console.log('Payment Return');
-    response.end('Payment Return');
-});
-
-app.post('/PaymentReturn', function(request, response) {
+app.all('/PaymentReturn', function(request, response) {
     console.log('Payment Return');
     response.end('Payment Return');
 });
