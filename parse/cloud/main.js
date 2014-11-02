@@ -65,7 +65,11 @@ app.all('/SubmitHostedPayment', function(request, response) {
 
     console.log('Charging for amount: ' + amount);
 
-    var xmlBody = '<?xml version="1.0" encoding="utf-8"?>\
+    var PaymentIds = Parse.Object.extend("PaymentIds");
+    var newPaymentId = new PaymentIds();
+    newPaymentId.save({amount:amount,payer:payer,paid:paid}, {
+        success: function (data) {
+            var xmlBody = '<?xml version="1.0" encoding="utf-8"?>\
         <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">\
     <soap:Body>\
     <InitializePayment xmlns="http://www.mercurypay.com/">\
@@ -78,7 +82,7 @@ app.all('/SubmitHostedPayment', function(request, response) {
     <TranType>Sale</TranType>\
     <Frequency>OneTime</Frequency>\
     <Memo>SplitMe Payment</Memo>\
-    <ProcessCompleteUrl>http://splitme.parseapp.com/bill.html?amount='+amount+'&payer='+payer+'&paid='+paid+'</ProcessCompleteUrl>\
+    <ProcessCompleteUrl>http://splitme.parseapp.com/PaymentComplete/'+data.id+'</ProcessCompleteUrl>\
     <ReturnUrl>http://splitme.parseapp.com/bill.html</ReturnUrl>\
     <OperatorID>dano</OperatorID>\
     </request>\
@@ -86,40 +90,60 @@ app.all('/SubmitHostedPayment', function(request, response) {
     </soap:Body>\
     </soap:Envelope>';
 
-    Parse.Cloud.httpRequest({
-        url: 'https://hc.mercurydev.net/hcws/hcservice.asmx',
-        method: "POST",
-        headers: { 'Content-Type': 'text/xml',
-            'SOAPAction':'http://www.mercurypay.com/InitializePayment'},
-        body: xmlBody,
-        success: function (httpResponse) {
-            console.log(httpResponse.text);
-            //var responseJson = JSON.parse(httpResponse.text);
-            //
-            //response.json(responseJson);
-            //<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><InitializePaymentResponse xmlns="http://www.mercurypay.com/"><InitializePaymentResult><ResponseCode>0</ResponseCode><PaymentID>d20eb481-d7be-4d91-b1ff-c47c3dfbd150</PaymentID><Message>Initialize Successful</Message></InitializePaymentResult></InitializePaymentResponse></soap:Body></soap:Envelope>
+            console.log(xmlBody);
 
-            //response.end(httpResponse.text);
-            var document = new xmldoc.XmlDocument(httpResponse.text);
-            var PaymentID = document.valueWithPath('soap:Body.InitializePaymentResponse.InitializePaymentResult.PaymentID');
-            console.log('HostedCheckout PaymentId: ' + PaymentID);
-            //response.end(PaymentID);
+            Parse.Cloud.httpRequest({
+                url: 'https://hc.mercurydev.net/hcws/hcservice.asmx',
+                method: "POST",
+                headers: { 'Content-Type': 'text/xml',
+                    'SOAPAction':'http://www.mercurypay.com/InitializePayment'},
+                body: xmlBody,
+                success: function (httpResponse) {
+                    //console.log(httpResponse.text);
 
-            response.render('hostedredirect', {
-                PaymentId: PaymentID
+                    var document = new xmldoc.XmlDocument(httpResponse.text);
+                    var PaymentID = document.valueWithPath('soap:Body.InitializePaymentResponse.InitializePaymentResult.PaymentID');
+                    console.log('HostedCheckout PaymentId: ' + PaymentID);
+                    //response.end(PaymentID);
+
+                    response.render('hostedredirect', {
+                        PaymentId: PaymentID
+                    });
+                },
+                error: function (httpResponse) {
+                    console.error(httpResponse.text);
+                    //response.json(responseJson);
+                    response.end(httpResponse.text);
+                }
             });
         },
-        error: function (httpResponse) {
-            console.error(httpResponse.text);
-            //response.json(responseJson);
-            response.end(httpResponse.text);
+        error: function (data, error) {
+            console.log('newPaymentId save failed');
+            // The save failed.  Error is an instance of Parse.Error.
+            console.log(error);
         }
     });
 });
 
-app.post('/PaymentComplete', function(request, response) {
-    console.log('Payment Complete');
-    response.end('Payment Complete');
+app.post('/PaymentComplete/:objectId', function(request, response) {
+    console.log('Payment Complete: '+request.params.objectId);
+    var PaymentIds = Parse.Object.extend("PaymentIds");
+    var query = new Parse.Query(PaymentIds);
+    query.get(request.params.objectId, {
+        success: function(PaymentId) {
+            // The object was retrieved successfully.
+            response.redirect('/bill.html?amount='+PaymentId.get('amount')+'&payer='+PaymentId.get('payer')+'&paid='+PaymentId.get('paid'));
+        },
+        error: function(object, error) {
+            // The object was not retrieved successfully.
+            // error is a Parse.Error with an error code and message.
+        }
+    });
+
+
+
+
+    //response.end('Payment Complete');
 });
 
 app.all('/PaymentReturn', function(request, response) {
@@ -168,6 +192,10 @@ app.get('/VerifyPayment', function(request, response) {
             response.end(httpResponse.text);
         }
     });
+});
+
+app.all('/test', function(request, response) {
+    console.log(request.body);
 });
 
 // Attach the Express app to your Cloud Code
