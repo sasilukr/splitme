@@ -3,6 +3,18 @@ h1 {
     color: white;
     font-family: 'Yellowtail', cursive;
     font-size: 60px;
+    margin: 0;
+}
+
+h2 {
+    color: white;
+    font-size: 24px;
+}
+
+body {
+    margin-bottom: 120px;
+    font-size: 24px;
+
 }
 
 .absolute-center {
@@ -28,6 +40,44 @@ h1 {
     float: right;
 }
 
+.btn-split {
+    background-color: rgb(247, 225, 117);
+    padding: 6px 28px;
+}
+
+.card {
+    border-radius: 6px;
+    background-color: white;
+    color: #701314;
+    padding: 10px;
+    display: inline-block;
+    width: 90%;
+}
+.container {
+    text-align: center;
+}
+
+.dish-name {
+    float: left;
+}
+
+.footer {
+    position: absolute;
+    height: 120px;
+    background-color: white;
+    color: black;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+}
+
+.footer-subtotal {
+    height: 120px;
+    color: black;
+    bottom: 120px;
+    width: 100%;
+    padding: 10px;
+}
 .gradient {
     background-image:
     linear-gradient(
@@ -40,6 +90,46 @@ h1 {
     width: 200px;
 }
 
+.menu-img {
+    float: left;
+    width: 30%;
+    margin: 10px 0;
+
+}
+
+.menu-people {
+    float: right;
+    width: 65%;
+    margin: 10px 0px;
+}
+
+
+.menu-people-name {
+    float: left;
+}
+.price {
+    float: right;
+    font-size: 24px;
+
+}
+
+.total {
+    float: left;
+}
+
+
+.total-person {
+    float: right;
+}
+
+.total-person>ul {
+    list-style: none;
+}
+
+.total-person-amount {
+    float: right;
+    margin-left: 10px;
+}
 
 
 /****** TOGGLE SWTICH *****/
@@ -66,12 +156,12 @@ h1 {
     -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 .onoffswitch-inner:before {
-    content: "Yum!";
+    content: "Ray";
     padding-left: 10px;
     background-color: #560F10; color: #FFFFFF;
 }
 .onoffswitch-inner:after {
-    content: "Nope";
+    content: "Ray";
     padding-right: 10px;
     background-color: #EEEEEE; color: #999999;
     text-align: right;
