@@ -1,0 +1,56 @@
+<div class="card">
+    <div class="dish-name">Double Bypass Burger</div>
+    <div class="price">
+        12.03
+    </div>
+
+    <img class="menu-img" src="img/menu-img1.png"/>
+    <div class="menu-people">
+        <table id="splitme-table" class="">
+            <tr>
+                <td>
+                    Ray
+                </td>
+                <td class="menu-toggle">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch1-1">
+                        <label class="onoffswitch-label" for="myonoffswitch1-1">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Sasi
+                </td>
+                <td class="menu-toggle">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch1-2">
+                        <label class="onoffswitch-label" for="myonoffswitch1-2">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Harvey
+                </td>
+                <td class="menu-toggle">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch1-3">
+                        <label class="onoffswitch-label" for="myonoffswitch1-3">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+</div>
