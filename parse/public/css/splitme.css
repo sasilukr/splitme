@@ -94,7 +94,7 @@ body {
     float: left;
     width: 30%;
     margin: 10px 0;
-
+    clear: both;
 }
 
 .menu-people {
@@ -156,12 +156,12 @@ body {
     -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 .onoffswitch-inner:before {
-    content: "Ray";
+    content: "Yum!";
     padding-left: 10px;
     background-color: #560F10; color: #FFFFFF;
 }
 .onoffswitch-inner:after {
-    content: "Ray";
+    content: "Nope";
     padding-right: 10px;
     background-color: #EEEEEE; color: #999999;
     text-align: right;
