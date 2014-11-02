@@ -110,15 +110,17 @@
       <file leaf-file-name="bill.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/bill.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.75" vertical-offset="336" max-vertical-offset="3672">
-              <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.76804125" vertical-offset="3076" max-vertical-offset="4302">
+              <caret line="203" column="23" selection-start-line="203" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
               <folding>
+                <element signature="e#601#1858#0" expanded="true" />
                 <element signature="n#!!block;n#drawCard#0" expanded="true" />
                 <element signature="n#!!block;n#updateTotal#0" expanded="true" />
                 <element signature="n#!!block;n#togglePay#0" expanded="true" />
                 <element signature="n#!!block;n#payall#0" expanded="true" />
-                <element signature="n#!!block;n#pay#0" expanded="true" />
                 <element signature="n#!!block;n#getParameterByName#0" expanded="true" />
+                <element signature="n#!!block;n#setCookie#0" expanded="true" />
+                <element signature="n#!!block;n#getCookie#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -429,15 +431,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/bill.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75" vertical-offset="336" max-vertical-offset="3672">
-          <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.76804125" vertical-offset="3076" max-vertical-offset="4302">
+          <caret line="203" column="23" selection-start-line="203" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
           <folding>
+            <element signature="e#601#1858#0" expanded="true" />
             <element signature="n#!!block;n#drawCard#0" expanded="true" />
             <element signature="n#!!block;n#updateTotal#0" expanded="true" />
             <element signature="n#!!block;n#togglePay#0" expanded="true" />
             <element signature="n#!!block;n#payall#0" expanded="true" />
-            <element signature="n#!!block;n#pay#0" expanded="true" />
             <element signature="n#!!block;n#getParameterByName#0" expanded="true" />
+            <element signature="n#!!block;n#setCookie#0" expanded="true" />
+            <element signature="n#!!block;n#getCookie#0" expanded="true" />
           </folding>
         </state>
       </provider>

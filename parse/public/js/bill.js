@@ -15,11 +15,13 @@ var cost = [
     {p1: 0, p2: 0, p3: 0},
     {p1: 0, p2: 0, p3: 0},
     {p1: 0, p2: 0, p3: 0},
-    {p1: 0, p2: 0, p3: 0},
+    {p1: 0, p2: 0, p3: 0}
 ];
 
 var tax = 1.081;
 var tip = 1.15;
+
+var cookieName = 'splitme';
 
 $( document ).ready(function() {
     drawCard();
@@ -49,7 +51,15 @@ $( document ).ready(function() {
 
         var newTotal = originalTotal - paidAmount;
         $("#total-amount").text("$" + newTotal);
+
+        cost = JSON.parse(getCookie(cookieName));
+        console.log("Cost " + cost);
+
+        // TODO update toggle options
+    } else {
+        setCookie(cookieName, "");
     }
+
 
 });
 
@@ -182,10 +192,17 @@ function payall() {
 }
 
 function pay(person) {
+    var paidUser = "&paid=";
+    if ( getParameterByName("paid") ) {
+        paidUser += getParameterByName("paid");
+    }
     var total = $("#total-person-" + person).text().split("$")[1];
-    var url = "/SubmitHostedPayment?amount=" + total + "&payer=" + people[person];
+    var url = "/SubmitHostedPayment?amount=" + total + "&payer=" + people[person] + paidUser;
 
     console.log("pay url " + url);
+
+    setCookie(cookieName, JSON.stringify(cost));
+
     window.location = url;
 }
 
@@ -195,4 +212,22 @@ function getParameterByName(name) {
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
         results = regex.exec(location.search);
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+function setCookie(cname, cvalue) {
+    var d = new Date();
+    d.setTime(d.getTime() + (30*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) != -1) return c.substring(name.length,c.length);
+    }
+    return "";
 }
