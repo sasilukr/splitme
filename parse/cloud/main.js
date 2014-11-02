@@ -1,6 +1,7 @@
 var express = require('express');
 var _ = require('underscore');
 var querystring = require('querystring');
+var xmldoc = require('cloud/xmldoc.js');
 
 /**
  * Create an express application instance
@@ -92,7 +93,12 @@ app.get('/SubmitHostedPayment', function(request, response) {
             //
             //response.json(responseJson);
             //<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><InitializePaymentResponse xmlns="http://www.mercurypay.com/"><InitializePaymentResult><ResponseCode>0</ResponseCode><PaymentID>d20eb481-d7be-4d91-b1ff-c47c3dfbd150</PaymentID><Message>Initialize Successful</Message></InitializePaymentResult></InitializePaymentResponse></soap:Body></soap:Envelope>
-            response.end(httpResponse.text);
+
+            //response.end(httpResponse.text);
+            var document = new xmldoc.XmlDocument(httpResponse.text);
+            var PaymentID = document.valueWithPath('soap:Body.InitializePaymentResponse.InitializePaymentResult.PaymentID');
+            console.log('HostedCheckout PaymentId: ' + PaymentID);
+            response.end(PaymentID);
         },
         error: function (httpResponse) {
             console.error(httpResponse.text);
